@@ -1,0 +1,130 @@
+:root {
+  --primary-color: #FFD90F;
+  --secondary-color: #70D1FE;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  /* Fallback */
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/Casa Simpson.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  z-index: -1;
+  opacity: 0.6;
+  /* Slight transparency to blend with background color if needed, or just full opacity. Let's start with full but blurring often looks better slightly dimmed or overlayed. I'll stick to simple blur for now but maybe add a slight dark overlay on top could help readability. */
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  color: #333;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 0px var(--primary-color);
+}
+
+.controls {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.main-nav {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.main-nav button {
+  background-color: #eee;
+  color: #333;
+}
+
+.main-nav button.active {
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  width: 200px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #4bb3e0;
+}
+
+.random-btn {
+  background-color: var(--primary-color);
+  color: #333;
+}
+
+.random-btn:hover {
+  background-color: #e6c200;
+}
+
+.loading {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 40px;
+}
+
+.error {
+  color: #F44336;
+  font-size: 1.2rem;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #ffebee;
+  border-radius: 8px;
+}
+
+.content-area {
+  min-height: 400px;
+  /* Prevent jumpiness */
+}
+
+.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}

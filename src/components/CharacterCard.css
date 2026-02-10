@@ -1,0 +1,101 @@
+.character-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    max-width: 400px;
+    margin: 20px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.2s;
+}
+
+.character-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    background-color: #FFD90F; /* Simpsons Yellow */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.card-header h2 {
+    margin: 0;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-badge.alive {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.status-badge.deceased {
+    background-color: #F44336;
+    color: white;
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.character-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #FFD90F;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+}
+
+.character-info p {
+    margin: 8px 0;
+    color: #555;
+}
+
+.card-footer {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.card-footer h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.phrases-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.phrases-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+    font-style: italic;
+    color: #666;
+}
+
+.phrases-list li:last-child {
+    border-bottom: none;
+}
