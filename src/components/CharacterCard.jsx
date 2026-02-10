@@ -20,7 +20,9 @@ const CharacterCard = ({ character }) => {
     // Construct image URL: https://thesimpsonsapi.com + portrait_path
     // Some APIs include the starting slash, some don't. Let's handle both or assume one.
     // The prompt says: https://thesimpsonsapi.com + portrait_path
-    const imageUrl = `https:cdn.thesimpsonsapi.com/500${portrait_path}`;
+    const imageUrl = portrait_path
+        ? `https://cdn.thesimpsonsapi.com/500${portrait_path}`
+        : null;
 
     return (
         <div className="character-card">
